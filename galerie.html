@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Moyen</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>galerie</h1>
+        <a href="index.html" class="btn-retour">Retour</a>
+    </header>
+
+    <main class="gallery">
+        <div class="pixel-card">
+            <img src="image/ton-image-coeur.png.jpg" alt="Pixel Art Coeur">
+        </div>
+        <div class="pixel-card">
+            <img src="image/etoile-arc-en-ciel-pixel-art-mosaique-grille-fond-blanc.png" alt="Pixel Art Etoile">
+        </div>
+        <div class="pixel-card">
+            <img src="image/smayler.jpg" alt="Pixel Art Oeuf">
+        </div>
+        <div class="pixel-card">
+            <img src="image/wochi oeuf.jpg" alt="Pixel Art Emoji">
+        </div>
+        <div class="pixel-card">
+            <img src="image/attention.jpg" alt="Pixel Art Attention">
+        </div>
+        <div class="pixel-card">
+            <img src="image/planette.jpeg" Pixel Art Coeur">
+        </div>
+        <div class="pixel-card">
+            <img src="image/glace byzzare.jpg" alt="Pixel Art Etoile">
+        </div>
+        <div class="pixel-card">
+            <img src="image/etoile dificile.png" alt="Pixel Art Oeuf">
+        </div>
+        <div class="pixel-card">
+            <img src="image/jsp.jpg" alt="Pixel Art Emoji">
+        </div>
+        <div class="pixel-card">
+            <img src="#" alt="Pixel Art Attention">
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Crée l'élément overlay et ajoute-le au body
+            const overlay = document.createElement('div');
+            overlay.classList.add('zoom-overlay');
+            const zoomedImg = document.createElement('img');
+            overlay.appendChild(zoomedImg);
+            document.body.appendChild(overlay);
+
+            // 2. Sélectionne toutes tes images dans .pixel-card
+            const pixelImages = document.querySelectorAll('.pixel-card img');
+
+            // 3. Ajoute un gestionnaire d'événement 'click' à chaque image
+            pixelImages.forEach(img => {
+                img.addEventListener('click', (e) => {
+                    // Met à jour la source de l'image de l'overlay
+                    zoomedImg.src = e.target.src;
+                    zoomedImg.alt = e.target.alt;
+                    // Affiche l'overlay
+                    overlay.classList.add('active');
+                    // Empêche le scroll sur la page principale
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // 4. Ajoute un gestionnaire pour fermer l'overlay
+            // (au clic n'importe où sur l'overlay)
+            overlay.addEventListener('click', () => {
+                overlay.classList.remove('active');
+                // Réactive le scroll sur la page principale
+                document.body.style.overflow = '';
+            });
+
+            // Permet aussi de fermer avec la touche Echap
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+</main>
+
+</body>
+
+</html>

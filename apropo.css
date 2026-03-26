@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5cm;
+}
+
+button {
+    padding: 25px 30px;
+    background-color: #000000;
+    color: #03e9f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 20cm;
+    padding: 0.5;
+    border-radius: 5em;
+
+}
+
+button:hover {
+    background: #03e9f4;
+    color: #ffffff;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.action-button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    /* Ici on modifie la couleur et le fond de notre petit bouton */
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.action-button:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+
+h3 {
+    font-family: "Playwrite NZ Basic"
+}
+
+h3 {
+    display: inline-block;
+}
+
+body {
+    background-color: rgb(9, 50, 126);
+}
+
+/* --- Variables et Reset --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-facile: #2ecc71;
+    --accent-moyen: #f1c40f;
+    --accent-difficile: #e74c3c;
+    --text-color: #333;
+    --text-light: #ecf0f1;
+    --bg-gradient: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Conteneur Principal --- */
+.main-container {
+    max-width: 1000px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* --- Header --- */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pixel-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.page-header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #e3f2fd;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+/* --- Introduction --- */
+.intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-section p {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Grille des Niveaux --- */
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.level-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.level-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.level-card p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Couleurs spécifiques aux niveaux */
+.level-card.facile h3 {
+    color: var(--accent-facile);
+}
+
+.level-card.moyen h3 {
+    color: var(--accent-moyen);
+}
+
+.level-card.difficile h3 {
+    color: var(--accent-difficile);
+}
+
+.level-card.facile:hover {
+    border-color: var(--accent-facile);
+}
+
+.level-card.moyen:hover {
+    border-color: var(--accent-moyen);
+}
+
+.level-card.difficile:hover {
+    border-color: var(--accent-difficile);
+}
+
+/* --- Section Zoom (Glassmorphism) --- */
+.zoom-feature-card {
+    background: rgba(44, 62, 80, 0.85);
+    /* Fond sombre semi-transparent */
+    backdrop-filter: blur(10px);
+    /* Effet flou derrière (verre dépoli) */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ajout d'un éclat lumineux subtil */
+.zoom-feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.zoom-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.zoom-icon-wrapper {
+    background: white;
+    color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-text h2 {
+    font-size: 2.2rem;
+    color: var(--accent-moyen);
+    /* Jaune doré */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.zoom-text p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #ecf0f1;
+}
+
+/* --- Footer et Bouton --- */
+.page-footer {
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    background-color: #2c3e50;
+    padding: 18px 45px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    border: 2px solid #2c3e50;
+}
+
+.btn-back:hover {
+    background-color: white;
+    color: #2c3e50;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Responsivité --- */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .zoom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
